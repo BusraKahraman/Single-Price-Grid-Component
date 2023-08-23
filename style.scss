@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+// fonts
+
+$karla: 'Karla', sans-serif;
+$regular: 400;
+$bold: 700;
+
+// colors
+
+$cyan: hsl(179, 62%, 43%);
+$bright-yellow: hsl(71, 73%, 54%);
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+$light-cyan: hsl(179, 47%, 52%);
+$white: hsl(0, 0%, 100%);
+
+//mixins
+
+@mixin responsive($min-width, $max-width) {
+  @media screen and (min-width: #{$min-width}px) and (max-width: #{$max-width}px) {
+    @content;
+  }
+}
+
+// colors and typography
+
+.white {
+  background-color: $white;
+}
+
+.txt-white {
+  color: $white;
+}
+
+.cyan {
+  background-color: $cyan;
+}
+
+.txt-cyan {
+  color: $cyan;
+}
+
+.light-cyan {
+  background-color: $light-cyan;
+}
+
+.yellow {
+  background-color: $bright-yellow;
+}
+
+.txt-yellow {
+  color: $bright-yellow;
+}
+
+.gray {
+  background-color: $light-gray;
+}
+
+.txt-gray {
+  color: $light-gray;
+}
+
+.blue {
+  background-color: $grayish-blue;
+}
+
+.txt-blue {
+  color: $grayish-blue;
+}
+
+.bold {
+  font-weight: $bold;
+}
+
+.reg {
+  font-weight: $regular;
+}
+
+//styles
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: $karla;
+  background-color: $light-gray;
+}
