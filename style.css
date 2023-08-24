@@ -1,4 +1,95 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Karla", sans-serif;
+  background-color: hsl(204, 43%, 93%);
+}
+
+.grid-container {
+  display: grid;
+  gap: 0;
+  grid-template-areas: "one" "two" "three";
+  place-items: center;
+  align-content: center;
+  margin: 5em auto;
+}
+
+section {
+  width: 80%;
+  padding: 2em 1em;
+  box-shadow: 0 10px 32px -18px hsl(218, 22%, 67%);
+}
+
+.main {
+  border-radius: 5px 5px 0 0;
+  grid-area: one;
+}
+.main h3,
+.main p {
+  margin-top: 1em;
+}
+
+.sub h5,
+.sub p,
+.sub button,
+.sub ul,
+.why-us h5,
+.why-us p,
+.why-us button,
+.why-us ul {
+  margin-top: 1em;
+}
+
+.why-us {
+  border-radius: 0 0 5px 5px;
+  grid-area: three;
+}
+.why-us ul {
+  line-height: 1.25;
+}
+.why-us li {
+  list-style: none;
+}
+
+.sub {
+  grid-area: two;
+}
+.sub button {
+  width: 100%;
+  padding: 1em 1em;
+  margin-top: 2em;
+  margin-bottom: -0.9em;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 8px 32px -18px black;
+}
+.sub h5 {
+  font-size: 2em;
+}
+.sub h5 span {
+  font-size: 15px;
+  position: absolute;
+  margin: 0.6em 0 0 0.6em;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: auto;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 .white {
   background-color: hsl(0, 0%, 100%);
 }
@@ -51,84 +142,21 @@
   font-weight: 400;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-size: 15px;
-  font-family: "Karla", sans-serif;
-  background-color: hsl(204, 43%, 93%);
-  display: grid;
-  place-items: center;
-  align-content: center;
-  margin: 5em -1em;
-}
-
-section {
-  max-width: 375px;
-  width: 80%;
-  padding: 2em 1em;
-  box-shadow: 0 10px 32px -18px hsl(218, 22%, 67%);
-}
-
-.main {
-  border-radius: 5px 5px 0 0;
-}
-.main h3,
-.main p {
-  margin-top: 1em;
-}
-
-.sub h5,
-.sub p,
-.sub button,
-.sub ul,
-.why-us h5,
-.why-us p,
-.why-us button,
-.why-us ul {
-  margin-top: 1em;
-}
-
-.why-us {
-  border-radius: 0 0 5px 5px;
-}
-.why-us ul {
-  line-height: 1e 0.25;
-}
-.why-us li {
-  list-style: none;
-}
-
-.sub button {
-  width: 100%;
-  padding: 1em 1em;
-  margin-top: 2em;
-  margin-bottom: -0.9em;
-  border-radius: 5px;
-  border: none;
-  box-shadow: 0 8px 32px -18px black;
-}
-.sub h5 {
-  font-size: 2em;
-}
-.sub h5 span {
-  font-size: 15px;
-  position: absolute;
-  margin: 0.6em 0 0 0.6em;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: auto;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+@media screen and (min-width: 769px) {
+  .grid-container {
+    grid-template-areas: "one one" "two three";
+    width: 80%;
+    margin: 16em auto;
+    padding: 0 3em;
+  }
+  section {
+    width: 100%;
+  }
+  .sub {
+    border-radius: 0 0 0 5px;
+  }
+  .why-us {
+    border-radius: 0 0 5px 0;
+    height: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
