@@ -35,6 +35,11 @@ body {
   font-size: 15px;
   font-family: $karla;
   background-color: $light-gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .grid-container {
@@ -46,7 +51,8 @@ body {
     'three';
   place-items: center;
   align-content: center;
-  margin: 5em auto;
+  margin: auto;
+  max-width: 375px;
 }
 
 section {
@@ -184,8 +190,7 @@ section {
       'one one'
       'two three';
     width: 80%;
-    margin: 16em auto;
-    padding: 0 3em;
+    max-width: 769px;
   }
 
   section {
@@ -193,6 +198,11 @@ section {
   }
   .sub {
     border-radius: 0 0 0 5px;
+
+    button {
+      width: 70%;
+      margin-left: 1em;
+    }
   }
   .why-us {
     border-radius: 0 0 5px 0;
